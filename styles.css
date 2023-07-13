@@ -1,0 +1,53 @@
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #222;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; 
+  /* Font family distinto en cada Navegador formato: ttf. Monospace */
+  color: #fff
+}
+/* Primero poner los selectores de elementos. */
+/* Buscar diferencia de vh vw px. */
+h1 {
+  margin-top: 5vh;
+  text-align: center;
+}
+
+button {
+  margin: 20px;
+  padding: 15px;
+  background-color: darkseagreen;
+  font-size: 16px;
+  color:#222;
+  border: none;
+  border-radius:4px;
+  cursor: pointer;
+}
+
+.simon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 20vw;
+  margin-top: 5vh;
+
+}
+.simonBtn { /* elementos de linea pero con un display block puedo forzarlos a ser bloques. */
+  display: block;
+  width: 5vw;
+  height: 5vh;
+  margin: 1vw;
+  border-radius: 1vw;
+}
+
+#redBtn { background-color: red;}
+#greenBtn { background-color: green;}
+#blueBtn { background-color: blue;}
+#yellowBtn { background-color: yellow;}
+
+/* button highlight */
+
