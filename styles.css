@@ -16,15 +16,13 @@ h1 {
   text-align: center;
 }
 
-button {
-  margin: 20px;
-  padding: 15px;
-  background-color: darkseagreen;
-  font-size: 16px;
-  color:#222;
-  border: none;
-  border-radius:4px;
-  cursor: pointer;
+
+#title {
+  font-family: 'Original Surfer', cursive;
+  position: absolute;
+  font-size: 40px;
+  margin-left: 35px;
+  margin-top: 40px;
 }
 
 .simon {
@@ -36,18 +34,142 @@ button {
   margin-top: 5vh;
 
 }
-.simonBtn { /* elementos de linea pero con un display block puedo forzarlos a ser bloques. */
-  display: block;
-  width: 5vw;
-  height: 5vh;
-  margin: 1vw;
-  border-radius: 1vw;
+
+#score {
+  font-size: 24px;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-#redBtn { background-color: red;}
-#greenBtn { background-color: green;}
-#blueBtn { background-color: blue;}
-#yellowBtn { background-color: yellow;}
+button {
+  margin: 20px;
+  padding: 15px;
+  background-color: #ccc;
+  font-size: 16px;
+  color: #222;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.simon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 40vw;
+  margin-top: 5vh;
+}
+
+.simonBtn {
+  display: block;
+  width: 10vw;
+  height: 10vw;
+  margin: 2vw;
+  border-radius: 2vw;
+}
+
+#redBtn { background-color: #900; }
+#greenBtn { background-color: #090; }
+#blueBtn { background-color: #009; }
+#yellowBtn { background-color: #990; }
+
+
+#redBtn.highlight { background-color: #f00; }
+#greenBtn.highlight { background-color: #0f0; }
+#blueBtn.highlight { background-color: #00f; }
+#yellowBtn.highlight { background-color: #ff0; }
+
+/* #redBtn {
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  border-radius: 250px 0 0 0;
+  background: rgb(3, 129, 3);
+  top: 50%;
+  left: 50%;
+  margin: -250px 0px 0px -250px;
+  border-style: solid;
+  border-width: 5px;
+  box-sizing: border-box;
+}
+
+#yellowBtn {
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  border-radius: 0 250px 0 0;
+  background: rgb(161, 8, 8);
+  top: 50%;
+  left: 50%;
+  margin: -250px 0px 0px 0px;
+  border-style: solid;
+  border-width: 5px;
+  box-sizing: border-box;
+}
+
+#blueBtn {
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  border-radius: 0 0 0 250px;
+  background: rgb(255, 183, 0);
+  top: 50%;
+  left: 50%;
+  margin: 0px -250px 0px -250px;
+  border-style: solid;
+  border-width: 5px;
+  box-sizing: border-box;
+
+}
+
+#greenBtn {
+  position: absolute;
+  height: 250px;
+  width: 250px;
+  border-radius: 0 0 250px 0;
+  background: rgb(5, 5, 148);
+  top: 50%;
+  left: 50%;
+  margin: 0px 0px -250px 0px;
+  border-style: solid;
+  border-width: 5px;
+  box-sizing: border-box;
+
+}
+
+.controls {
+  position: absolute;
+  background: grey;
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  border-style: solid;
+  border-width: 10px;
+  top: 50%;
+  left: 50%;
+  margin: -125px 0px 0px -125px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+
+button {
+  margin: 10%;
+  padding: 5%;
+  background-color: darkseagreen;
+  font-size: 16px;
+  color:#222;
+  border:#222;
+  border-radius:1vh;
+  cursor: pointer;
+}
 
 /* button highlight */
 
+/* #redBtn.highlight { background-color: #f00; }
+#greenBtn.highlight { background-color: #0f0; }
+#blueBtn.highlight { background-color: #00f; }
+#yellowBtn.highlight { background-color: #ff0; }  */
