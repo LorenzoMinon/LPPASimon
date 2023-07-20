@@ -54,6 +54,7 @@ button {
 }
 
 .simon {
+  height: 300px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -70,40 +71,39 @@ button {
   border-radius: 2vw;
 }
 
-#redBtn { background-color: #900; }
-#greenBtn { background-color: #090; }
+/* #redBtn { background-color: #900; } */
+/* #greenBtn { background-color: #090; }
 #blueBtn { background-color: #009; }
 #yellowBtn { background-color: #990; }
 
 
-#redBtn.highlight { background-color: #f00; }
+ #redBtn.highlight { background-color: #f00; } 
 #greenBtn.highlight { background-color: #0f0; }
 #blueBtn.highlight { background-color: #00f; }
-#yellowBtn.highlight { background-color: #ff0; }
+#yellowBtn.highlight { background-color: #ff0; } */
 
-/* #redBtn {
+ #redBtn {
   position: absolute;
-  height: 250px;
-  width: 250px;
-  border-radius: 250px 0 0 0;
-  background: rgb(3, 129, 3);
+  height: 125px;
+  width: 125px;
+  border-radius: 125px 0 0 0;
+  background-color: rgb(162, 0, 0);
   top: 50%;
-  left: 50%;
-  margin: -250px 0px 0px -250px;
+  left: 60%;
+  margin: -125px 0px 0px -250px;
   border-style: solid;
   border-width: 5px;
   box-sizing: border-box;
 }
-
-#yellowBtn {
+#redBtn.highlight {
   position: absolute;
-  height: 250px;
-  width: 250px;
-  border-radius: 0 250px 0 0;
-  background: rgb(161, 8, 8);
+  height: 125px;
+  width: 125px;
+  border-radius: 125px 0 0 0;
+  background-color: rgb(255, 22, 22);
   top: 50%;
-  left: 50%;
-  margin: -250px 0px 0px 0px;
+  left: 60%;
+  margin: -125px 0px 0px -250px;
   border-style: solid;
   border-width: 5px;
   box-sizing: border-box;
@@ -111,34 +111,92 @@ button {
 
 #blueBtn {
   position: absolute;
-  height: 250px;
-  width: 250px;
-  border-radius: 0 0 0 250px;
+  height: 125px;
+  width: 125px;
+  border-radius: 0 0 0 125px;
+  background: rgb(0, 0, 128);
+  top: 49.5%;
+  left: 51%;
+  margin: 0px -125px 0px -127px;
+  border-style: solid;
+  border-width: 5px;
+  box-sizing: border-box;
+
+}
+#blueBtn.highlight {
+  position: absolute;
+  height: 125px;
+  width: 125px;
+  border-radius: 0 0 0 125px;
+  background: rgb(0, 0, 255);
+  top: 49.5%;
+  left: 51%;
+  margin: 0px -125px 0px -127px;
+  border-style: solid;
+  border-width: 5px;
+  box-sizing: border-box;
+}
+
+
+
+
+#yellowBtn {
+  position: absolute;
+  height: 125px;
+  width: 125px;
+  border-radius: 0 125px 0 0;
+  background: rgb(149, 107, 0);
+  top: 50%;
+  left: 50%;
+  margin: -125px 0px 0px 0px;
+  border-style: solid;
+  border-width: 5px;
+  box-sizing: border-box;
+}
+#yellowBtn.highlight {
+  position: absolute;
+  height: 125px;
+  width: 125px;
+  border-radius: 0 125px 0 0;
   background: rgb(255, 183, 0);
   top: 50%;
   left: 50%;
-  margin: 0px -250px 0px -250px;
+  margin: -125px 0px 0px 0px;
   border-style: solid;
   border-width: 5px;
   box-sizing: border-box;
-
 }
+
+
 
 #greenBtn {
   position: absolute;
-  height: 250px;
-  width: 250px;
-  border-radius: 0 0 250px 0;
-  background: rgb(5, 5, 148);
-  top: 50%;
+  height: 125px;
+  width: 125px;
+  border-radius: 0 0 125px 0;
+  background: rgb(0, 137, 0);
+  top: 49.5%;
   left: 50%;
-  margin: 0px 0px -250px 0px;
+  margin: 0px 0px -125px 0px;
   border-style: solid;
   border-width: 5px;
   box-sizing: border-box;
 
 }
-
+#greenBtn.highlight {
+  position: absolute;
+  height: 125px;
+  width: 125px;
+  border-radius: 0 0 125px 0;
+  background: rgb(0, 255, 0);
+  top: 49.5%;
+  left: 50%;
+  margin: 0px 0px -125px 0px;
+  border-style: solid;
+  border-width: 5px;
+  box-sizing: border-box;
+}
+/*
 .controls {
   position: absolute;
   background: grey;
@@ -165,7 +223,7 @@ button {
   border:#222;
   border-radius:1vh;
   cursor: pointer;
-}
+} */
 
 /* button highlight */
 
