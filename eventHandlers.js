@@ -61,6 +61,7 @@ var handlePlayBtn = function() {
 
   var checkColor = function(color) {
     var expectedColor = sequence.shift();
+    //El shift en este caso toma el primer elemento del arreglo y lo asigna con el color que se espera.
     if (color === expectedColor) {
       console.log('Color correcto');
       score++;
