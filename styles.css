@@ -25,15 +25,6 @@ h1 {
   margin-top: 40px;
 }
 
-.simon {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  width: 20vw;
-  margin-top: 5vh;
-
-}
 
 #score {
   font-size: 24px;
@@ -54,46 +45,43 @@ button {
 }
 
 .simon {
-  height: 300px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  width: 40vw;
-  margin-top: 5vh;
+  background: #385a94;
+  border-radius: 30%;
+  position: relative;
+  border-style: solid;
+  border-width: 10px;
+  margin: auto;
+  margin-top: 180px;
+  box-shadow: 8px 8px 15px 5px #888888;
 }
 
 .simonBtn {
+  position: relative;
   display: block;
-  width: 10vw;
-  height: 10vw;
-  margin: 2vw;
+  width: 15vw;
+  height: 15vw;
+  margin: 0;
   border-radius: 2vw;
 }
 
-/* #redBtn { background-color: #900; } */
-/* #greenBtn { background-color: #090; }
-#blueBtn { background-color: #009; }
-#yellowBtn { background-color: #990; }
-
-
- #redBtn.highlight { background-color: #f00; } 
-#greenBtn.highlight { background-color: #0f0; }
-#blueBtn.highlight { background-color: #00f; }
-#yellowBtn.highlight { background-color: #ff0; } */
-
  #redBtn {
+
   position: absolute;
   height: 125px;
   width: 125px;
   border-radius: 125px 0 0 0;
-  background-color: rgb(162, 0, 0);
+  -moz-border-radius: 125px 0 0 0;
+  -webkit-border-radius: 125px 0 0 0;
+  background: rgb(162, 0, 0);
   top: 50%;
-  left: 60%;
-  margin: -125px 0px 0px -250px;
+  left: 50%;
+  margin: -125px 0px 0px -125px;
   border-style: solid;
   border-width: 5px;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+
 }
 #redBtn.highlight {
   position: absolute;
@@ -103,25 +91,27 @@ button {
   background-color: rgb(255, 22, 22);
   top: 50%;
   left: 60%;
-  margin: -125px 0px 0px -250px;
+  margin: -125px 0px 0px -125px;
   border-style: solid;
   border-width: 5px;
   box-sizing: border-box;
 }
-
 #blueBtn {
   position: absolute;
   height: 125px;
   width: 125px;
   border-radius: 0 0 0 125px;
-  background: rgb(0, 0, 128);
-  top: 49.5%;
-  left: 51%;
-  margin: 0px -125px 0px -127px;
+  -moz-border-radius: 0 0 0 125px;
+  -webkit-border-radius: 0 0 0 125px;
+  background:rgb(0, 0, 128);
+  top: 50%;
+  left: 50%;
+  margin: 0px -125px 0px -125px;
   border-style: solid;
   border-width: 5px;
   box-sizing: border-box;
-
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 #blueBtn.highlight {
   position: absolute;
@@ -131,20 +121,18 @@ button {
   background: rgb(0, 0, 255);
   top: 49.5%;
   left: 51%;
-  margin: 0px -125px 0px -127px;
+  margin: 0px -125px 0px -125px;
   border-style: solid;
   border-width: 5px;
   box-sizing: border-box;
 }
-
-
-
-
 #yellowBtn {
   position: absolute;
   height: 125px;
   width: 125px;
   border-radius: 0 125px 0 0;
+  -moz-border-radius: 0 125px 0 0;
+  -webkit-border-radius: 0 125px 0 0;
   background: rgb(149, 107, 0);
   top: 50%;
   left: 50%;
@@ -152,6 +140,8 @@ button {
   border-style: solid;
   border-width: 5px;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 #yellowBtn.highlight {
   position: absolute;
@@ -166,21 +156,22 @@ button {
   border-width: 5px;
   box-sizing: border-box;
 }
-
-
-
 #greenBtn {
   position: absolute;
   height: 125px;
   width: 125px;
   border-radius: 0 0 125px 0;
+  -moz-border-radius: 0 0 125px 0;
+  -webkit-border-radius: 0 0 125px 0;
   background: rgb(0, 137, 0);
-  top: 49.5%;
+  top: 50%;
   left: 50%;
   margin: 0px 0px -125px 0px;
   border-style: solid;
   border-width: 5px;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 
 }
 #greenBtn.highlight {
@@ -196,38 +187,3 @@ button {
   border-width: 5px;
   box-sizing: border-box;
 }
-/*
-.controls {
-  position: absolute;
-  background: grey;
-  border-radius: 50%;
-  height: 250px;
-  width: 250px;
-  border-style: solid;
-  border-width: 10px;
-  top: 50%;
-  left: 50%;
-  margin: -125px 0px 0px -125px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-
-
-button {
-  margin: 10%;
-  padding: 5%;
-  background-color: darkseagreen;
-  font-size: 16px;
-  color:#222;
-  border:#222;
-  border-radius:1vh;
-  cursor: pointer;
-} */
-
-/* button highlight */
-
-/* #redBtn.highlight { background-color: #f00; }
-#greenBtn.highlight { background-color: #0f0; }
-#blueBtn.highlight { background-color: #00f; }
-#yellowBtn.highlight { background-color: #ff0; }  */
