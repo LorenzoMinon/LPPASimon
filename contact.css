@@ -1,0 +1,91 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #222;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; 
+    /* Font family distinto en cada Navegador formato: ttf. Monospace */
+    color: #201818
+  }
+/* Estilos generales para la barra de navegación */
+nav {
+    background-color: #333;
+    color: rgb(59, 49, 125);
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    padding: 5px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  /* Estilos para el enlace "Contacto" */
+  #contactLink {
+    color: #ffffff;
+  }
+  
+  /* Estilos para el formulario */
+  #contactFormContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  #contactForm {
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  #contactForm h2 {
+    margin-bottom: 15px;
+  }
+  
+  #contactForm label,
+  #contactForm input,
+  #contactForm textarea {
+    margin-bottom: 10px;
+  }
+  
+  #contactForm input,
+  #contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #contactForm button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #contactForm button:hover {
+    background-color: #555;
+  }
+  
+  /* Otros estilos existentes */
+
+.return-link {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #d3c2c2;
+    text-decoration: none;
+  }
+  

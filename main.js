@@ -14,4 +14,5 @@ window.onload = function() {
   yellowBtn.addEventListener('click', handleYellowBtn);
   blueBtn.addEventListener('click', handleBlueBtn);
   greenBtn.addEventListener('click', handleGreenBtn);
+  
 };

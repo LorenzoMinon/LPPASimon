@@ -8,8 +8,18 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <nav>
+    <ul>
+      <!-- Otros elementos de navegación -->
+      <li><a href="contact.html" id="contactLink">Contacto</a></li>
+    </ul>
+  </nav>
   <h1>Simon Game </h1>
   <div id="score">Score: </div>
+  <div>
+    <label for="playerName">Ingresa tu nombre:</label>
+    <input type="text" id="playerName" placeholder="Nombre">
+  </div>
   <div class="simon">
     <button id="redBtn" class="simonBtn"></button>
     <button id="yellowBtn" class="simonBtn"></button>
@@ -20,6 +30,14 @@
     <button id="playBtn" class="control">Play</button>
     <button id="resetBtn" class="control">Reset</button>
   </div>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>¡Perdiste! Tu puntuación final es: <span id="finalScore"></span></p>
+      <button id="restartBtn" class="control">Reiniciar</button>
+    </div>
+  </div>
+  
   <script src="eventHandlers.js"></script>
   <script src="main.js"></script> 
 </body>

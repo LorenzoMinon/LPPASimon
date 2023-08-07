@@ -9,6 +9,11 @@ var scoreElement = document.getElementById('score');
 
 var handlePlayBtn = function() {
     if (!isPlaying) {
+      var playerName = document.getElementById('playerName').value;
+      if (playerName.length < 3) {
+         alert("El nombre debe tener al menos 3 letras.");
+         return;
+      }
       console.log('click en handleplaybtn...');
       sequence = [];
       score = 0;
@@ -59,9 +64,9 @@ var handlePlayBtn = function() {
     }
   };
 
+
   var checkColor = function(color) {
     var expectedColor = sequence.shift();
-    //El shift en este caso toma el primer elemento del arreglo y lo asigna con el color que se espera.
     if (color === expectedColor) {
       console.log('Color correcto');
       score++;
@@ -73,14 +78,18 @@ var handlePlayBtn = function() {
           showSequence();
         }, 1000);
       }
-    } else {
-      console.log('Color incorrecto');
-      isPlaying = false;
-      playBtn.textContent = 'Play';
-      playBtn.disabled = false;
-      resetBtn.disabled = false;
     }
-  };
+    else {
+    console.log('Color incorrecto');
+    showLostModal(); // ACA
+    isPlaying = false;
+    playBtn.textContent = 'Play';
+    playBtn.disabled = false;
+    resetBtn.disabled = false;
+    }
+  }
+
+
 
   var showSequence = function() {
     var i = 0;
@@ -126,3 +135,27 @@ var handlePlayBtn = function() {
         break;
     }
   };
+  var showLostModal = function() {
+    isPlaying = false;
+    playBtn.textContent = 'Play';
+    playBtn.disabled = false;
+    resetBtn.disabled = false;
+
+    var modal = document.getElementById('myModal');
+    var finalScoreElement = document.getElementById('finalScore');
+    var restartBtn = document.getElementById('restartBtn');
+    var closeModalBtn = document.querySelector('.close'); 
+
+    finalScoreElement.textContent = score
+    
+    modal.style.display = 'block';
+  
+    restartBtn.addEventListener('click', function() {
+      modal.style.display = 'none';
+      handleResetBtn();
+    });
+    closeModalBtn.addEventListener('click', function() {
+      modal.style.display = 'none';
+      handleResetBtn();
+    });
+  }
