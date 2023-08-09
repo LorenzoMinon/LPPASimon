@@ -1,12 +1,12 @@
 'use strict';
 
 window.onload = function() {
-  var playBtn = document.getElementById('playBtn');
-  var resetBtn = document.getElementById('resetBtn');
-  var redBtn = document.getElementById('redBtn');
-  var yellowBtn = document.getElementById('yellowBtn');
-  var blueBtn = document.getElementById('blueBtn');
-  var greenBtn = document.getElementById('greenBtn');
+  var playBtn = document.getElementById('play_btn');
+  var resetBtn = document.getElementById('reset_btn');
+  var redBtn = document.getElementById('red_btn');
+  var yellowBtn = document.getElementById('yellow_btn');
+  var blueBtn = document.getElementById('blue_btn');
+  var greenBtn = document.getElementById('green_btn');
 
   playBtn.addEventListener('click', handlePlayBtn);
   resetBtn.addEventListener('click', handleResetBtn);
@@ -14,5 +14,4 @@ window.onload = function() {
   yellowBtn.addEventListener('click', handleYellowBtn);
   blueBtn.addEventListener('click', handleBlueBtn);
   greenBtn.addEventListener('click', handleGreenBtn);
-  
 };

@@ -4,23 +4,24 @@ var score = 0;
 var level = 1;
 var speed = 1000; // Velocidad inicial de la secuencia en milisegundos
 var isPlaying = false; // Variable para verificar si se está reproduciendo la secuencia
-
+var startTime; //Almacenamos el tiempo
 var scoreElement = document.getElementById('score');
 
 var handlePlayBtn = function() {
     if (!isPlaying) {
-      var playerName = document.getElementById('playerName').value;
+      var playerName = document.getElementById('player_name').value;
       if (playerName.length < 3) {
          alert("El nombre debe tener al menos 3 letras.");
          return;
       }
       console.log('click en handleplaybtn...');
+      startTime = Date.now(); // Captura el tiempo actual al inicio de alguna actividad
       sequence = [];
       score = 0;
       level = 1;
       scoreElement.textContent = 'Score: ' + score + ' Nivel: ' + level;
-      playBtn.textContent = 'Playing...';
-      playBtn.disabled = true;
+      play_btn.textContent = 'Playing...';
+      play_btn.disabled = true;
       isPlaying = true;
       setTimeout(function() {
         showSequence();
@@ -64,11 +65,11 @@ var handlePlayBtn = function() {
     }
   };
 
-
   var checkColor = function(color) {
     var expectedColor = sequence.shift();
     if (color === expectedColor) {
       console.log('Color correcto');
+      // Realiza alguna actividad que queremos medir en términos de tiempo
       score++;
       scoreElement.textContent = 'Score: ' + score + ' Nivel: ' + level;
       if (sequence.length === 0) {
@@ -80,7 +81,10 @@ var handlePlayBtn = function() {
       }
     }
     else {
-    console.log('Color incorrecto');
+    endTime = Date.now(); // Captura el tiempo actual al final de la actividad
+    elapsedTime = endTime - startTime; // Calcula la duración en milisegundos
+    console.log(elapsedTime);
+    finalscore = score - elapsedTime/10000;
     showLostModal(); // ACA
     isPlaying = false;
     playBtn.textContent = 'Play';
@@ -106,31 +110,30 @@ var handlePlayBtn = function() {
       i++;
     }, speed);
   };
-
   var highlightColor = function(color) {
     switch (color) {
       case 'red':
-        redBtn.classList.add('highlight');
+        red_btn.classList.add('highlight');
         setTimeout(function() {
-          redBtn.classList.remove('highlight');
+          red_btn.classList.remove('highlight');
         }, 500);
         break;
       case 'blue':
-        blueBtn.classList.add('highlight');
+        blue_btn.classList.add('highlight');
         setTimeout(function() {
-          blueBtn.classList.remove('highlight');
+          blue_btn.classList.remove('highlight');
         }, 500);
         break;
       case 'green':
-        greenBtn.classList.add('highlight');
+        green_btn.classList.add('highlight');
         setTimeout(function() {
-          greenBtn.classList.remove('highlight');
+          green_btn.classList.remove('highlight');
         }, 500);
         break;
       case 'yellow':
-        yellowBtn.classList.add('highlight');
+        yellow_btn.classList.add('highlight');
         setTimeout(function() {
-          yellowBtn.classList.remove('highlight');
+          yellow_btn.classList.remove('highlight');
         }, 500);
         break;
     }
@@ -142,14 +145,12 @@ var handlePlayBtn = function() {
     resetBtn.disabled = false;
 
     var modal = document.getElementById('myModal');
-    var finalScoreElement = document.getElementById('finalScore');
-    var restartBtn = document.getElementById('restartBtn');
+    var finalScoreElement = document.getElementById('final-score');
+    var restartBtn = document.getElementById('restart-btn');
     var closeModalBtn = document.querySelector('.close'); 
-
-    finalScoreElement.textContent = score
-    
+    finalScoreElement.textContent = finalscore //score
     modal.style.display = 'block';
-  
+
     restartBtn.addEventListener('click', function() {
       modal.style.display = 'none';
       handleResetBtn();

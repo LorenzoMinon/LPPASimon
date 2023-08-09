@@ -10,35 +10,33 @@
 <body>
   <nav>
     <ul>
-      <!-- Otros elementos de navegación -->
-      <li><a href="contact.html" id="contactLink">Contacto</a></li>
+      <li><a href="contact.html" id="contact_link">Contacto</a></li>
     </ul>
   </nav>
   <h1>Simon Game </h1>
   <div id="score">Score: </div>
   <div>
-    <label for="playerName">Ingresa tu nombre:</label>
-    <input type="text" id="playerName" placeholder="Nombre">
+    <label for="player_name">Ingresa tu nombre:</label>
+    <input type="text" id="player_name" placeholder="Nombre">
   </div>
   <div class="simon">
-    <button id="redBtn" class="simonBtn"></button>
-    <button id="yellowBtn" class="simonBtn"></button>
-    <button id="blueBtn" class="simonBtn"></button>
-    <button id="greenBtn" class="simonBtn"></button>
+    <button id="red_btn" class="simon_btn"></button>
+    <button id="yellow_btn" class="simon_btn"></button>
+    <button id="blue_btn" class="simon_btn"></button>
+    <button id="green_btn" class="simon_btn"></button>
    </div>
   <div class="controls">
-    <button id="playBtn" class="control">Play</button>
-    <button id="resetBtn" class="control">Reset</button>
+    <button id="play_btn" class="control">Play</button>
+    <button id="reset_btn" class="control">Reset</button>
   </div>
   <div id="myModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
-      <p>¡Perdiste! Tu puntuación final es: <span id="finalScore"></span></p>
-      <button id="restartBtn" class="control">Reiniciar</button>
+      <p>¡Perdiste! Tu puntuación final es: <span id="final_score"></span></p>
+      <button id="restart_btn" class="control">Reiniciar</button>
     </div>
   </div>
-  
-  <script src="eventHandlers.js"></script>
+  <script src="eventHandler.js"></script>
   <script src="main.js"></script> 
 </body>
 </html>
