@@ -11,7 +11,7 @@ var handlePlayBtn = function() {
     if (!isPlaying) {
       var playerName = document.getElementById('player_name').value;
       if (playerName.length < 3) {
-         alert("El nombre debe tener al menos 3 letras.");
+         alert('El nombre debe tener al menos 3 letras.');
          return;
       }
       console.log('click en handleplaybtn...');
