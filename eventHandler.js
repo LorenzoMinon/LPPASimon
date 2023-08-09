@@ -87,9 +87,9 @@ var handlePlayBtn = function() {
     finalscore = score - elapsedTime/10000;
     showLostModal(); // ACA
     isPlaying = false;
-    playBtn.textContent = 'Play';
-    playBtn.disabled = false;
-    resetBtn.disabled = false;
+    play_btn.textContent = 'Play';
+    play_btn.disabled = false;
+    reset_btn.disabled = false;
     }
   }
 
@@ -140,15 +140,15 @@ var handlePlayBtn = function() {
   };
   var showLostModal = function() {
     isPlaying = false;
-    playBtn.textContent = 'Play';
-    playBtn.disabled = false;
-    resetBtn.disabled = false;
+    play_btn.textContent = 'Play';
+    play_btn.disabled = false;
+    reset_btn.disabled = false;
 
     var modal = document.getElementById('myModal');
-    var finalScoreElement = document.getElementById('final-score');
-    var restartBtn = document.getElementById('restart-btn');
+    var final_scoreElement = document.getElementById('final_score');
+    var restartBtn = document.getElementById('restart_btn');
     var closeModalBtn = document.querySelector('.close'); 
-    finalScoreElement.textContent = finalscore //score
+    final_scoreElement.textContent = finalscore //score
     modal.style.display = 'block';
 
     restartBtn.addEventListener('click', function() {
